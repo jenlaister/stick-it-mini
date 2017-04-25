@@ -1,9 +1,9 @@
 class UsersController < ApplicationController
-  
-  get '/users' do
-    @users = User.all
-    erb :'/users/index'
-  end
+
+  # get '/users' do
+  #   @users = User.all
+  #   erb :'/users/index'
+  # end
 
   get '/users/new' do
     erb :'/users/new'
@@ -19,16 +19,16 @@ class UsersController < ApplicationController
     erb :'/users/show'
   end
 
-  # get '/users/:id/edit' do
-  #   @user = User.find_by_id(params[:id])
-  #   erb :'/users/edit'
-  # end
+  get '/users/:id/edit' do
+    @user = User.find_by_id(params[:id])
+    erb :'/users/edit'
+  end
 
-  # patch '/users/:id' do
-  #   @user = User.find_by_id(params[:id])
-  #   @user.update(params[:user])
-  #   redirect "/users/#{@user.id}"
-  # end
+  patch '/users/:id' do
+    @user = User.find_by_id(params[:id])
+    @user.update(params[:user])
+    redirect "/users/#{@user.id}"
+  end
 
 
 end

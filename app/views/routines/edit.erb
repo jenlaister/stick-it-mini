@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Edit a Habit:</h1>
+    <form method="post" action="/routines/<%= @routine.id %>">
+      <input id="hidden" type="hidden" name="_method" value="patch">
+      <label for="routine">Habit:</label>
+      <input id="routine" type="text" name="routine[habit]" value="<%= @routine.habit %>"><br>
+      <input type="submit" value="Save">
+    </body>
+</html>
