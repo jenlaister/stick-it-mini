@@ -1,0 +1,15 @@
+jenny = User.create(name: "Jenny")
+# jenny = User.create(name: "jenny")
+# jing = User.create(name: "jing")
+# kevin = User.create(name: "kevin")
+# ian = User.create(name: "ian")
+
+# run = Routine.create(user_id: jenny.id, routine: "run")
+# read = Routine.create(user_id: jing.id, routine: "read")
+# exercise = Routine.create(user_id: kevin.id, routine: "exercise")
+# cook = Routine.create(user_id: ian.id, routine: "cook")
+
+run = Routine.create(habit: "run")
+read = Routine.create(habit: "read")
+exercise = Routine.create(habit: "exercise")
+cook = Routine.create(habit: "cook")
