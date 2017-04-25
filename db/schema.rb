@@ -14,7 +14,8 @@
 ActiveRecord::Schema.define(version: 20170425034025) do
 
   create_table "routines", force: :cascade do |t|
-    t.string "habit"
+    t.integer "user_id"
+    t.string  "habit"
   end
 
   create_table "users", force: :cascade do |t|
