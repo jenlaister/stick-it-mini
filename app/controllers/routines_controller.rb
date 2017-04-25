@@ -1,0 +1,6 @@
+class RoutinesController < ApplicationController
+
+  
+
+
+end
