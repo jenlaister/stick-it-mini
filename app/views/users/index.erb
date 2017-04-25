@@ -5,8 +5,8 @@
     <title></title>
   </head>
   <body>
-    <h1>My Habit:</h1>
-    <ul>
-      <h2><%= @routine.habit %></h2>
+    <% @users.each do |user| %>
+    <p><%= user.name %></p>
+    <% end %>
   </body>
 </html>
