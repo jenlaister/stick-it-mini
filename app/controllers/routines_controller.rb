@@ -1,9 +1,11 @@
+require 'pry'
+
 class RoutinesController < ApplicationController
 
-  # get '/routines' do
-  #   @routines = Routine.all
-  #   erb :'/routines/index'
-  # end
+  get '/routines' do
+    @routines = Routine.all
+    erb :'/routines/index'
+  end
 
   get 'routines/new' do
     erb :'/routines/new'
@@ -14,7 +16,7 @@ class RoutinesController < ApplicationController
     redirect :'/routines'
   end
 
-  get 'routines/:id' do
+  get '/routines/:id' do
     @routine = Routine.find_by_id(params[:id])
     erb :'/routines/show'
   end

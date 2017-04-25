@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Routines:</h1>
+    <ul>
+      <% @routines.each do |routine| %>
+      <p><li><%= routine.habit.capitalize %></li></p>
+    </ul>
+    <% end %>
+  </body>
+</html>

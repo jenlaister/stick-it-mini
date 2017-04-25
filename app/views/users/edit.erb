@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form method="post" action="/routines/<%= @routine.id %>">
+    <input id="hidden" type="hidden" name="_method" value="patch">
+      <label for="user">Name:</label>
+      <input id="user" type="text" name="user[name]" value="<%= @user.name %>"><br>
+      <input type="submit" value="Save">
+    </form>
+  </body>
+</html>
