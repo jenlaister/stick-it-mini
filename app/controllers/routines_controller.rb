@@ -7,12 +7,12 @@ class RoutinesController < ApplicationController
     erb :'/routines/index'
   end
 
-  get 'routines/new' do
+  get '/routines/new' do
     erb :'/routines/new'
   end
 
   post '/routines' do
-    @routine = Routine.create(params[:routine])
+    @routine = Routine.create(habit: params[:routine][:habit])
     redirect :'/routines'
   end
 
