@@ -8,7 +8,7 @@
     <h1>Routines:</h1>
     <ul>
       <% @routines.each do |routine| %>
-      <p><li><%= routine.habit %></li></p>
+      <p><li><%= routine.habit.capitalize %></li></p>
     </ul>
     <% end %>
   </body>
